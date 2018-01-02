@@ -15,7 +15,7 @@ namespace ObiektowoscPowtorka
             set { dzial = value; }
         }
 
-        public Kierownik()
+        public Kierownik() 
         {
 
         }
