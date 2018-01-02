@@ -11,7 +11,7 @@ namespace ObiektowoscPowtorka
 
         public string Dzial
         {
-            get { return dzial; }
+            get { return dzial; } 
             set { dzial = value; }
         }
 
