@@ -83,6 +83,48 @@ namespace ObiektowoscPowtorka
             k.Funkcja();
             k.Funkcja1();
 
+            KolejkaSamochodow ks = new KolejkaSamochodow();
+            ks.Wjedz(s1);
+            ks.Wjedz(s2);
+            ks.Wjedz(s3);
+
+            Samochod wyjechal2 = ks.Wyjedz();
+            Console.WriteLine(wyjechal2.Marka + " " + wyjechal2.Model);
+
+            Samochod dowyjazduk = ks.Pokaz();
+            Console.WriteLine(dowyjazduk.Marka + " " + dowyjazduk.Model);
+
+            Lista2Samochody l2 = new Lista2Samochody();
+            l2.Wjedz(s1);
+            l2.Wjedz(s2);
+            l2.Wjedz(s3, false);
+            l2.Wjedz(s4, false);
+
+            Samochod wl2 = l2.Wyjedz();
+            Samochod wl2p = l2.Wyjedz(false);
+
+            Console.WriteLine(wl2.Marka + " " + wl2.Model);
+            Console.WriteLine(wl2p.Marka + " " + wl2p.Model);
+
+            Dictionary<string, List<Samochod>> slownik = new Dictionary<string, List<Samochod>>();
+            slownik.Add("Osobowe", new List<Samochod>() { s1, s2, s3 });
+            slownik.Add("Dostawcze", new List<Samochod>() { s4 });
+
+            Console.WriteLine("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Słownik XXXXXXXXXXXXXX");
+
+            foreach (KeyValuePair<string, List<Samochod>> kv in slownik)
+            {
+                Console.WriteLine(kv.Key + ":");
+
+                foreach(Samochod s in kv.Value)
+                {
+                    Console.WriteLine(s.Marka + " " + s.Model);
+                }
+            }
+
+
+
+
             Console.ReadKey();
         }
     }

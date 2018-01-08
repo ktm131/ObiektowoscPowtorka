@@ -42,6 +42,8 @@
     <Compile Include="Garaz.cs" />
     <Compile Include="IPracownik.cs" />
     <Compile Include="Kierownik.cs" />
+    <Compile Include="KolejkaSamochodow.cs" />
+    <Compile Include="Lista2Samochody.cs" />
     <Compile Include="Osoba.cs" />
     <Compile Include="Pracownik.cs" />
     <Compile Include="Program.cs" />
